@@ -8,7 +8,17 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = function (dates, select=NaN) {
+  let index = 0 ;
+  let result = [];
+  while (index < dates.length) {
+      result.push(Date.parse(dates[index])/1000);
+      index++;
+  }
+  // console.log(typeof(select));
+  return isNaN(select
+      )? result.sort().join('-') : result[select].toString(); 
+};
 
 // ! JANGAN DIMODIFIKASI
 (() => {
